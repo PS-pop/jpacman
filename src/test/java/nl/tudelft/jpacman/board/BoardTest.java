@@ -25,15 +25,4 @@ public class BoardTest {
         board = new Board(grid);
         assertThat(board.invariant()).isEqualTo(true);
     }
-    /**
-     * Test testSquareAt.
-     */
-    @Test
-    void testSquareAt() {
-        grid = new Square[][]{
-            {square, null}
-        };
-        board = new Board(grid);
-        assertThat(board.squareAt(0, 0)).isEqualTo(square);
-    }
 }
