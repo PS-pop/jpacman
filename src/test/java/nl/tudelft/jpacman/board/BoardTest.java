@@ -14,7 +14,9 @@ public class BoardTest {
     private Board board;
 
     private final Square square = new BasicSquare();
-
+    /**
+     * Test isBoardValid.
+     */
     @Test
     void isBoardValid (){
         grid = new Square[][]{
@@ -23,6 +25,9 @@ public class BoardTest {
         board = new Board(grid);
         assertThat(board.invariant()).isEqualTo(true);
     }
+    /**
+     * Test testSquareAt.
+     */
     @Test
     void testSquareAt() {
         grid = new Square[][]{
