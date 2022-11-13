@@ -9,12 +9,12 @@ name: JPacman CI with Gradle
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
-
+    branches: [ "main" ]
+    
 permissions:
-  contents: read
+  contents: write
   packages: write
 
 jobs:
@@ -33,6 +33,7 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: xvfb-run ./gradlew build
+    
     - name: Generate JaCoCo Badge
       uses: cicirello/jacoco-badge-generator@v2
       with:
