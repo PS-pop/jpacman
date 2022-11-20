@@ -71,7 +71,7 @@ public class MapParserTest {
                 map.add("############");
                 mapParser.parseMap(map);
             });
-        Assertions.assertEquals("Invalid character at 6,1--> A", thrown.getMessage());
+        Assertions.assertEquals("Invalid character at 6,1: A", thrown.getMessage());
     }
 
 }
